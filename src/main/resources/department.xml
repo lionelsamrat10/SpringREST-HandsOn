@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="fse" class="com.cognizant.springlearn.Department">
+		<property name="dept_id" value="1"/>
+		<property name="dept_name" value="FSE"/>
+	</bean>
+	<bean id="marketing" class="com.cognizant.springlearn.Department">
+		<property name="dept_id" value="2"/>
+		<property name="dept_name" value="Marketing"/>
+	</bean>
+	<bean id="consulting" class="com.cognizant.springlearn.Department">
+		<property name="dept_id" value="3"/>
+		<property name="dept_name" value="Consulting"/>
+	</bean>
+	<bean id="finance" class="com.cognizant.springlearn.Department">
+		<property name="dept_id" value="4"/>
+		<property name="dept_name" value="Finance"/>
+	</bean>
+	<bean id="automation" class="com.cognizant.springlearn.Department">
+		<property name="dept_id" value="5"/>
+		<property name="dept_name" value="Automation"/>
+	</bean>
+	
+	
+	<bean id="departmentList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="fse"/>
+				<ref bean="marketing"/>
+				<ref bean="consulting"/>
+				<ref bean="finance"/>
+				<ref bean="automation"/>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
